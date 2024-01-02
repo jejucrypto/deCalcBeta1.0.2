@@ -10,42 +10,27 @@
     <p>Please Select:</p>
 
     <p>POPULATION</p>
-    <a href='file:///C:/Users/enrique/Desktop/gege/futurepopulation.html'>
+    <a href='https://raw.githack.com/jejucrypto/deCalcBeta1.0.2/edit/main/futurepopulation.html'>
         <button>Future Population</button> <br>
     </a>
     
     <p>CONSTANT</p>
-    <a href="file:///C:/Users/enrique/Desktop/gege/c.html">
+    <a href="https://raw.githack.com/jejucrypto/deCalcBeta1.0.2/edit/main/c.html">
         <button>Constant(C)</button> <br>
     </a>
     
     <p>K</p>
-    <a href="file:///C:/Users/enrique/Desktop/gege/k.html">
+    <a href="https://raw.githack.com/jejucrypto/deCalcBeta1.0.2/edit/main/k.html">
         <button>Growth/Decay(k)</button> <br>
     </a>
     
     <p>TIME</p>
-    <a href="file:///C:/Users/enrique/Desktop/gege/finaltime.html">
+    <a href="https://raw.githack.com/jejucrypto/deCalcBeta1.0.2/edit/main/finaltime.html">
         <button>Final Time</button> <br>
     </a>
     
     
-    <script>
-        const math = require('mathjs');
-        const sytem = [
-            '400=p*exp(3*k)',
-            '2000=p*exp(10*k)'
-        ];
-
-        const residualsFunction = math.compile(system.map(eq => math.parse(eq).compile()));
-        const initialGuess = {p: 1, k: 0.1};
-        const solution = math.optimize(residualsFunction, initialGuess, {
-            method: 'newton',
-            maxIterations: 100
-        });
-
-        console.log(solution);
-    </script>
+    <script></script>
     
 </body>
 
