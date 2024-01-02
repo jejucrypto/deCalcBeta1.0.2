@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+</head>
+<body>
+    <h1>Time Calculation</h1>
+    <a href='file:///C:/Users/enrique/Desktop/gege/index.html'>
+        <button>Go Back</button> <br>
+    </a>
+    
+    <p>Enter the following:</p>
+    <form>
+        <label for="initialPopulation">Initial Population:</label>
+        <input type="number" id="initialPopulation"> <br>
+
+        <label for="currentPopulation">Current Population:</label>
+        <input type="number" id="currentPopulation"> <br>
+
+        <label for="futurePopulation">Future Population:</label>
+        <input type="number" id="futurePopulation"> <br>
+
+        <label for="initialTime">Initial Time:</label>
+        <input type="number" id="initialTime"> <br>
+
+        <label for="currentTime">Current Time:</label>
+        <input type="number" id="currentTime"> <br>
+
+    </form>
+
+    <button onclick="print()"> SOLVE</button>
+
+        <p id="c"></p>
+        <p id="k"></p>
+        <p id="finTime1"></p>
+
+        
+    <script href="script.js">
+        const iniPop1 = document.getElementById("initialPopulation");
+        const curPop1 = document.getElementById("currentPopulation");
+        const futPop1 = document.getElementById("futurePopulation");
+        const iniTime1 = document.getElementById("initialTime");
+        const curTime1 = document.getElementById("currentTime"); 
+
+        function print() { 
+        
+            let finTimeC = iniPop1.value;   
+            let finTimeK = Math.log(curPop1.value/finTimeC)/curTime1.value;
+            let finTime = Math.log(futPop1.value/finTimeC)/finTimeK;
+        
+            document.getElementById("c").innerHTML = "C="+finTimeC;
+            document.getElementById("k").innerHTML = "K="+finTimeK;
+            document.getElementById("finTime1").innerHTML = "Final Time="+finTime;
+
+        }
+    </script>
+</body>
+</html>

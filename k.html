@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+</head>
+<body>
+    <h1>Time Calculation</h1>
+    <a href='file:///C:/Users/enrique/Desktop/gege/index.html'>
+        <button>Go Back</button> <br>
+    </a>
+    
+    <p>Enter the following:</p>
+    <form>
+        <label for="population"> Population:</label>
+        <input type="number" id="population"> <br>
+
+        <label for="c">C:</label>
+        <input type="number" id="c"> <br>
+
+        <label for="time"> time:</label>
+        <input type="number" id="time"> <br>
+
+    </form>
+
+    <button onclick="print()"> SOLVE</button>
+
+        <p id="k"></p>
+        
+    <script>
+        const pop1 = document.getElementById("population");
+        const cPop1 = document.getElementById("c");
+        const time2 = document.getElementById("time");
+
+
+        function print() { 
+        
+            let kRes = Math.log(pop1.value/cPop1.value)/time.value;
+            document.getElementById("k").innerHTML = "k ="+kRes;
+
+        }
+    </script>
+</body>
+</html>

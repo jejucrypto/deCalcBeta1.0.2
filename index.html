@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Growth and Decay Calculator</h1>
+    <p>Please Select:</p>
+
+    <p>POPULATION</p>
+    <a href='file:///C:/Users/enrique/Desktop/gege/futurepopulation.html'>
+        <button>Future Population</button> <br>
+    </a>
+    
+    <p>CONSTANT</p>
+    <a href="file:///C:/Users/enrique/Desktop/gege/c.html">
+        <button>Constant(C)</button> <br>
+    </a>
+    
+    <p>K</p>
+    <a href="file:///C:/Users/enrique/Desktop/gege/k.html">
+        <button>Growth/Decay(k)</button> <br>
+    </a>
+    
+    <p>TIME</p>
+    <a href="file:///C:/Users/enrique/Desktop/gege/finaltime.html">
+        <button>Final Time</button> <br>
+    </a>
+    
+    
+    <script>
+        const math = require('mathjs');
+        const sytem = [
+            '400=p*exp(3*k)',
+            '2000=p*exp(10*k)'
+        ];
+
+        const residualsFunction = math.compile(system.map(eq => math.parse(eq).compile()));
+        const initialGuess = {p: 1, k: 0.1};
+        const solution = math.optimize(residualsFunction, initialGuess, {
+            method: 'newton',
+            maxIterations: 100
+        });
+
+        console.log(solution);
+    </script>
+    
+</body>
+
+</html>
